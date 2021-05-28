@@ -1,0 +1,3 @@
+displayName = TinyPlayer
+author = Chimmer
+version = 0.1
