@@ -9,6 +9,7 @@ namespace TinyPlayerHItbox
 {
 	public class TinyPlayerHItbox : Mod
 	{
+		// Set the value of the new hitbox
 		private static readonly int NewWidth = 2;
 		private static readonly int NewHeight = 2;
 		
@@ -58,6 +59,7 @@ namespace TinyPlayerHItbox
 				Logger.Error("Failed to IL edit Update");
 		}
 
+		// Make the player have a custom rect
 		private Rectangle PlayerOngetRect(On.Terraria.Player.orig_getRect orig, Player self)
 		{
 			return CalculateNewRect(self);
@@ -83,6 +85,7 @@ namespace TinyPlayerHItbox
 
 		private Rectangle CalculateNewRect(Player p)
 		{
+			// Calculate the center of the player, then get the new start of the rectangle
 			int centerX = (int) (p.position.X + p.width / 2f);
 			int centerY = (int) (p.position.Y + p.height / 2f);
 
